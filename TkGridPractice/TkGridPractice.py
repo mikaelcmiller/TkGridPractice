@@ -14,7 +14,6 @@ class Application(Frame):
 		print("creating widgets")
 		self.firstentry = Label(self, text="Mikael")
 		self.firstentry.grid(row=2, column=1, sticky=W)
-		#self.firstentry.pack()
 
 
 root = Tk()
