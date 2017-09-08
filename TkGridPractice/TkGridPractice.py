@@ -47,8 +47,8 @@ class Application(Frame):
 		self.R21C20 = Label(self, text="Label R21C20").grid(row=21, column=20)
 
 	def clearall(self, *event):
-		for label in self.entrylist:
-			label.delete(0, END)
+		for entry in self.entrylist:
+			entry.delete(0, END)
 
 	def resetfunction(self,*event):
 		print("Reset Activated")
