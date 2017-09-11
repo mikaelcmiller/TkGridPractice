@@ -16,11 +16,10 @@ class Application(Frame):
 	def create_widgets(self):
 		self.entrylist = []
 		print("creating widgets")
-		r = range(1,25)
+		r = range(1,30)
 		for i in r:
 			self.x = Label(self,text='R'+str(i))
 			self.x.grid(row=i, column=0)
-		for i in r:
 			self.x = Label(self,text='C'+str(i))
 			self.x.grid(row=0, column=i)
 		self.R1C1 = Entry(self)
@@ -53,7 +52,7 @@ class Application(Frame):
 	def resetfunction(self,*event):
 		print("Reset Activated")
 		self.R1C1.delete(0, END)
-		self.R1C1.insert(0, "R0C0")
+		self.R1C1.insert(0, "[R1C1 Default value]")
 
 	def fetchR1C1(self,*event):
 		got = self.R1C1.get()
