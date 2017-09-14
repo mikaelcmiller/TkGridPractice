@@ -60,6 +60,7 @@ class Application(Frame):
 		print(got)
 		self.R1C1.delete(0, END)
 		self.R1C1.insert(0, got)
+		print("R1C1 Fetched")
 
 
 root = Tk()
