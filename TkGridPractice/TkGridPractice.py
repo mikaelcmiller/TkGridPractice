@@ -48,6 +48,7 @@ class Application(Frame):
 	def clearall(self, *event):
 		for entry in self.entrylist:
 			entry.delete(0, END)
+		print("Clear Activated")
 
 	def resetfunction(self,*event):
 		print("Default R1C1 Activated")
