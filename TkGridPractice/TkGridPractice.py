@@ -48,9 +48,10 @@ class Application(Frame):
 	def clearall(self, *event):
 		for entry in self.entrylist:
 			entry.delete(0, END)
+		print("Clear Activated")
 
 	def resetfunction(self,*event):
-		print("Reset Activated")
+		print("Default R1C1 Activated")
 		self.R1C1.delete(0, END)
 		self.R1C1.insert(0, "[R1C1 Default value]")
 
@@ -59,6 +60,7 @@ class Application(Frame):
 		print(got)
 		self.R1C1.delete(0, END)
 		self.R1C1.insert(0, got)
+		print("R1C1 Fetched")
 
 
 root = Tk()
