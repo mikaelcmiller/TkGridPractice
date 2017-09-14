@@ -50,7 +50,7 @@ class Application(Frame):
 			entry.delete(0, END)
 
 	def resetfunction(self,*event):
-		print("Reset Activated")
+		print("Default R1C1 Activated")
 		self.R1C1.delete(0, END)
 		self.R1C1.insert(0, "[R1C1 Default value]")
 
