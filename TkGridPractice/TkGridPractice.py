@@ -37,11 +37,13 @@ class Application(Frame):
 		self.R3C5.grid(row=3, column=5, rowspan=6)
 		scrollbar = Scrollbar(self)
 		scrollbar.grid(row=3, column=5, rowspan=6, sticky='NSE')
-		self.R3C5.insert(END, "Just a text Widget\nin two lines\n3\n4\n5\n6\n7\n")
+		self.R3C5.insert(END, "Just a text Widget\nin multiple lines\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15")
 		self.R3C5.config(state=DISABLED, yscrollcommand=scrollbar.set)
 		scrollbar.config(command=self.R3C5.yview)
 		#self.R4C4 = Text(self, width=10, height=2) # Text allows users to enter multiple lines of text
 		#self.R4C4.grid(row=4, column=4)
+### /TEXT ###
+
 		self.R5C4 = Entry(self)
 		self.R5C4.grid(row=5, column=4) # Use entry for single-line values
 		# self.RC = Label(self, text="RC").grid(row=1, column=0) # widgets stack on top of each other when put in the same grid
