@@ -31,6 +31,10 @@ class Application(Frame):
 		self.R2C2.grid(row=2, column=2)
 		self.R3C3 = Label(self, text="R3C3")
 		self.R3C3.grid(row=3, column=3)
+		self.R3C5 = Text(self, height=2, width=45)
+		self.R3C5.grid(row=3, column=5)
+		self.R3C5.insert(END, "Just a text Widget\nin two lines\n")
+		self.R3C5.config(state=DISABLED)
 		#self.R4C4 = Text(self, width=10, height=2) # Text allows users to enter multiple lines of text
 		#self.R4C4.grid(row=4, column=4)
 		self.R5C4 = Entry(self)
