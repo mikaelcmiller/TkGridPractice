@@ -33,11 +33,13 @@ class Application(Frame):
 		self.R3C3.grid(row=3, column=3)
 
 ##	TEXT WIDGET PRACTICE ##
-		self.R3C5 = Text(self, height=6, width=45)
-		self.R3C5.grid(row=3, column=5, rowspan=6)
-		scrollbar = Scrollbar(self)
-		scrollbar.grid(row=3, column=5, rowspan=6, sticky='NSE')
-		self.R3C5.insert(END, "Just a text Widget\nin multiple lines\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15")
+		self.FrameR3C5 = Frame(self)
+		self.FrameR3C5.grid(row=3, column=5, columnspan=6, sticky=W)
+		self.R3C5 = Text(self.FrameR3C5, height=6, width=45)
+		self.R3C5.pack(side='left', fill='both', expand=True)
+		scrollbar = Scrollbar(self.FrameR3C5)
+		scrollbar.pack(side='right', fill='both', expand=True) #grid(row=3, column=5, rowspan=6, sticky=N+S+E)
+		self.R3C5.insert(END, "Just a text Widget that has an overflow of text we will see what happens\nin multiple lines\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15")
 		self.R3C5.config(state=DISABLED, yscrollcommand=scrollbar.set)
 		scrollbar.config(command=self.R3C5.yview)
 		#self.R4C4 = Text(self, width=10, height=2) # Text allows users to enter multiple lines of text
